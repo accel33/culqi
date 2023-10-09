@@ -7,7 +7,7 @@ import {
   MinMaxYearValidator,
 } from '../class-validators'
 
-export class CreateCardDto {
+export class TarjetaDto {
   @Validate(LuhnValidator)
   @Validate(LengthValidator, [13, 16])
   @IsNumber({}, { message: (args) => `${args.property} debe ingresar numeros` })

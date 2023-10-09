@@ -1,8 +1,7 @@
 export type Tarjeta = {
-  email: string
   card_number: number
-  cvv: number
-  expiration_year: string
+  email: string
   expiration_month: string
+  expiration_year: string
   token: string
 }
