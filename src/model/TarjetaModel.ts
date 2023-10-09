@@ -1,20 +1,14 @@
 import { Schema, model } from 'mongoose'
-import { Tarjeta } from 'src/types/Tarjeta'
+import { TarjetaRetornada } from 'src/types/TarjetaRetornada'
 
-const TarjetaSchema = new Schema<Tarjeta>({
-  email: {
-    type: String,
-  },
-  card_number: {
-    type: Number,
-  },
-  expiration_year: {
-    type: String,
-  },
-  expiration_month: {
-    type: String,
-  },
-  token: { type: String },
+const TarjetaSchema = new Schema<TarjetaRetornada>({
+  email: String,
+  card_number: Number,
+  expiration_year: String,
+  expiration_month: String,
+  token: String,
+  created_at: Date,
+  expired_at: Date,
 })
 
 export default model('TarjetaModel', TarjetaSchema)
