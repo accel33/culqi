@@ -12,27 +12,15 @@ provider:
 #    variable1: value1
 
 functions:
-  hello:
-    handler: handler.hello
+  generarToken:
+    handler: build/handler.generarToken
     events:
       - httpApi:
-          path: /users/create
-          method: get
-      # - websocket: $connect
-      # - s3: ${env:BUCKET}
-      # - schedule: rate(10 minutes)
-#    Define function environment variables here
-#    environment:
-#      variable2: value2
-
-# you can add CloudFormation resource templates here
-#resources:
-#  Resources:
-#    NewResource:
-#      Type: AWS::S3::Bucket
-#      Properties:
-#        BucketName: my-new-bucket
-#  Outputs:
-#     NewOutput:
-#       Description: "Description for the output"
-#       Value: "Some output value"
+          path: /tokens
+          method: POST
+  procesarCargo:
+    handler: build/handler.procesarCargo
+    events:
+      - httpApi:
+          path: /tokens
+          method: GET
