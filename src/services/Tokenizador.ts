@@ -1,10 +1,10 @@
 import { uid } from 'rand-token'
 import { Tarjeta } from '../types/Tarjeta'
-import { TarjetaDto } from 'src/dto/TarjetaDto'
-import TarjetaModel from 'src/model/TarjetaModel'
+import { TarjetaDto } from '../dto/TarjetaDto'
+import TarjetaModel from '../model/TarjetaModel'
 import { BadRequestError, NotFoundError } from 'restify-errors'
-import { TarjetaRetornada } from 'src/types/TarjetaRetornada'
-import { MongoDbService } from 'src/db/MongoDbService'
+import { TarjetaRetornada } from '../types/TarjetaRetornada'
+import { MongoDbService } from '../db/MongoDbService'
 
 const mongodb = new MongoDbService()
 mongodb.connect()

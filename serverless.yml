@@ -24,3 +24,6 @@ functions:
       - httpApi:
           path: /tokens
           method: GET
+
+plugins:
+  - serverless-offline
