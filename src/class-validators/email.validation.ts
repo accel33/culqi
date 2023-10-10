@@ -8,11 +8,11 @@ import {
 export class EmailValidator implements ValidatorConstraintInterface {
   emailRegex = new RegExp(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/, 'gm')
   validate(value: string) {
-    console.log(value && typeof value === 'string' && this.emailRegex.test(value))
+    // console.log(value && typeof value === 'string' && this.emailRegex.test(value))
     return value && typeof value === 'string' && this.emailRegex.test(value)
   }
 
   defaultMessage(args: ValidationArguments) {
-    return `${args.property}${args.value ? ': ' + args.value : ''} no es un email valido. `
+    return `${args.property} no es un email valido`
   }
 }

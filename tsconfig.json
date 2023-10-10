@@ -18,7 +18,11 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
   },
+  // "include": [
+  //   "src/"
+  // ]
   "include": [
-    "src/"
+    "src/**/*.ts", // Include your source files
+    "tests/**/*.ts" // Include your test files
   ]
 }

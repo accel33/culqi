@@ -28,6 +28,6 @@ export class LuhnValidator implements ValidatorConstraintInterface {
   }
 
   defaultMessage(args: ValidationArguments) {
-    return `${args.property}${args.value ? ': ' + args.value : ''} no es válido`
+    return `${args.property} no es valido`
   }
 }

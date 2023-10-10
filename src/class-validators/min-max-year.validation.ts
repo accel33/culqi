@@ -14,6 +14,6 @@ export class MinMaxYearValidator implements ValidatorConstraintInterface {
   }
 
   defaultMessage(args: ValidationArguments) {
-    return `${args.property}${args.value ? ': ' + args.value : ''} no esta en el rango de años`
+    return `${args.property} no esta en el rango de años`
   }
 }

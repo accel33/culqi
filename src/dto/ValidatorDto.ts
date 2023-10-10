@@ -21,11 +21,10 @@ export const validatorDto = async <T extends ClassConstructor<any>>(dto: T, obj:
   const errors = await validate(objInstance)
   // errors is an array of validation errors
   if (errors.length > 0) {
-    console.log(errors)
-
+    // console.log(Object.values(errors[0].constraints)[0])
     // throw new TypeError(
     //   `validation failed. The error fields : ${errors.map(({ property }) => property)}`,
     // )
-    return errors
+    return Object.values(errors[0].constraints)[0]
   }
 }

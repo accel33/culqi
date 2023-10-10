@@ -2,6 +2,6 @@
 node_modules
 jspm_packages
 build
-build/*
+coverage
 # Serverless directories
 .serverless

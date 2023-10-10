@@ -16,8 +16,6 @@ export class MinMaxValidator implements ValidatorConstraintInterface {
   }
 
   defaultMessage(args: ValidationArguments) {
-    return `${args.property}${args.value ? ': ' + args.value : ''} debe estar entre ${
-      args.constraints[0]
-    } y ${args.constraints[1]}.`
+    return `${args.property} debe estar entre ${args.constraints[0]} y ${args.constraints[1]}`
   }
 }

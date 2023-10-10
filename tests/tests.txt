@@ -31,3 +31,6 @@ constraints: {
   Length: 'expiration_year debe tener 4 caracteres',
   MinMaxYear: 'expiration_year no esta en el rango de años'
 }
+
+{ message: 'La tarjeta ha expirado' }
+{ message: 'Token mal ingresado' }

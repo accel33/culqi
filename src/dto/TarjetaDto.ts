@@ -1,18 +1,40 @@
-import { IsEmail, IsNumber, IsString } from 'class-validator'
+import { IsEmail, IsNotEmpty, IsNumber, IsString, Validate } from 'class-validator'
+import {
+  EmailValidator,
+  LengthValidator,
+  LuhnValidator,
+  MinMaxValidator,
+  MinMaxYearValidator,
+} from '../class-validators'
 import { Tarjeta } from 'src/types/Tarjeta'
 
 export class TarjetaDto implements Tarjeta {
-  // @Length(13, 16, { message: desc('debe tener 14 caracteres') })
-  // @IsNumber({}, { message: desc('debe ingresar numeros') })
-  // @IsNotEmpty({ message: desc('es requerido') })
-  @IsNumber()
+  @Validate(LuhnValidator)
+  @Validate(LengthValidator, [13, 16])
+  @IsNumber({}, { message: (args) => `${args.property} debe ingresar numeros` })
+  @IsNotEmpty({ message: (args) => `${args.property} es requerido` })
   card_number: number
-  @IsNumber()
+
+  @Validate(LengthValidator, [3, 4])
+  @IsNumber({}, { message: (args) => `${args.property} debe ingresar numeros` })
+  @IsNotEmpty({ message: (args) => `${args.property} es requerido` })
   cvv: number
-  @IsEmail()
-  email: string
-  @IsString()
+
+  @Validate(MinMaxValidator, [1, 12])
+  @Validate(LengthValidator, [1, 2])
+  @IsString({ message: (args) => `${args.property} debe ingresar caracteres` })
+  @IsNotEmpty({ message: (args) => `${args.property} es requerido` })
   expiration_month: string
-  @IsString()
+
+  @Validate(MinMaxYearValidator)
+  @Validate(LengthValidator, [4, 4])
+  @IsString({ message: (args) => `${args.property} debe ingresar caracteres` })
+  @IsNotEmpty({ message: (args) => `${args.property} es requerido` })
   expiration_year: string
+
+  // @IsEmail()
+  @Validate(EmailValidator)
+  @IsString({ message: (args) => `${args.property} debe ingresar caracteres` })
+  @IsNotEmpty({ message: (args) => `${args.property} es requerido` })
+  email: string
 }

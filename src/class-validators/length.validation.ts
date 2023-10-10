@@ -17,7 +17,7 @@ export class LengthValidator implements ValidatorConstraintInterface {
   defaultMessage(args: ValidationArguments) {
     const num1 = args.constraints[0]
     const num2 = args.constraints[1]
-    return `${args.property}${args.value ? ': ' + args.value : ''} debe tener ${
+    return `${args.property} debe tener ${
       num1 === num2 ? num1 : 'entre ' + num1 + ' y ' + num2
     } caracteres`
   }
