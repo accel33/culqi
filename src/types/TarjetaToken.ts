@@ -1,7 +1,7 @@
-export interface Tarjeta {
+export interface TarjetaToken {
   card_number: number
-  cvv: number
+  email: string
   expiration_month: string
   expiration_year: string
-  email: string
+  token: string
 }

@@ -1,4 +1,4 @@
-export type TarjetaRetornada = {
+export interface TarjetaRetornada {
   card_number: number
   expiration_month: string
   expiration_year: string

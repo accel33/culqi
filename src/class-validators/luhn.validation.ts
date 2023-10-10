@@ -5,7 +5,7 @@ import {
 } from 'class-validator'
 
 const mayorQueNueve = (num: number): number => {
-  return num > 9 ? Number(String(num)[0]) + Number(String(num)[1]) : num
+  return num > 9 ? 1 + (num % 10) : num
 }
 
 const luhnCheck2 = (num: number): boolean => {

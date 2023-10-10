@@ -6,8 +6,9 @@ import {
 
 @ValidatorConstraint({ name: 'Email' })
 export class EmailValidator implements ValidatorConstraintInterface {
-  private emailRegex = new RegExp(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/, 'gm')
+  emailRegex = new RegExp(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/, 'gm')
   validate(value: string) {
+    console.log(value && typeof value === 'string' && this.emailRegex.test(value))
     return value && typeof value === 'string' && this.emailRegex.test(value)
   }
 
