@@ -1,18 +1,20 @@
 # Culqi Backend Lambda App
 
-### Configuracion inicial - Commandos a ejecutar
+### Configuración inicial - Comandos a ejecutar
 
-Para empezar a utilizar la aplicacion hay que tener instalado [Nodejs](https://nodejs.org/en) en la maquina ejecutando esta aplicacion. Luego correr el siguiente comando dentro de la carpeta:
+Clonar el repositorio para empezar a utilizar la aplicación. Hay que tener instalado [Nodejs](https://nodejs.org/en) y [Serverless](https://www.npmjs.com/package/serverless) de manera global si se quiere probar en local:
 
 ```
 npm install -g serverless
 ```
 
+Una vez completada la instalación ingresar a la carpeta y ejecutar el comando:
+
 ```
 npm install
 ```
 
-El package.json del proyecto tiene 2 comandos:
+##### El package.json del proyecto cuenta con los siguientes comandos:
 
 1. Comando para compilar TypeScript y generar el build de la aplicación:
    ```
@@ -27,7 +29,7 @@ El package.json del proyecto tiene 2 comandos:
    npm run local
    ```
 
-### Documentacion Postman
+### Documentación Postman
 
 https://documenter.getpostman.com/view/3273833/2s9YJhy1Gs
 
