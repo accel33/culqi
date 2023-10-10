@@ -43,9 +43,9 @@ https://documenter.getpostman.com/view/3273833/2s9YJhy1Gs
 
 #### Endpoints:
 
-    POST - https://651v0emplk.execute-api.sa-east-1.amazonaws.com/tokens
+##### POST: https://651v0emplk.execute-api.sa-east-1.amazonaws.com/tokens
 
-    GET - https://651v0emplk.execute-api.sa-east-1.amazonaws.com/tokens
+##### GET: https://651v0emplk.execute-api.sa-east-1.amazonaws.com/tokens
 
 #### Functions:
 
