@@ -10,9 +10,15 @@ El package.json del proyecto tiene 2 comandos:
 
 1. Comando para compilar TypeScript y generar el build de la aplicación:
    ```
-   npm run build
+   npm start
    ```
 2. Comando para ejecutar los test de la aplicación en un entorno local:
    ```
-   npm run test
+   npm test
    ```
+
+### Documentacion Postman
+
+https://documenter.getpostman.com/view/3273833/2s9YJhy1Gs
+
+![My Image](screens/api.png)

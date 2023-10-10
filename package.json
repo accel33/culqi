@@ -4,8 +4,10 @@
   "description": "",
   "main": "handler.js",
   "scripts": {
-    "build": "tsc --build",
+    "start": "tsc --build",
     "test": "jest --coverage",
+    "aws": "sls deploy",
+    "local": "sls offline",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
   },
   "keywords": [],
