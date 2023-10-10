@@ -1,5 +1,7 @@
 # Culqi Backend Lambda App
 
+### Configuracion inicial - Commandos a ejecutar
+
 Para empezar a utilizar la aplicacion hay que tener instalado [Nodejs](https://nodejs.org/en) en la maquina ejecutando esta aplicacion. Luego correr el siguiente comando dentro de la carpeta:
 
 ```
